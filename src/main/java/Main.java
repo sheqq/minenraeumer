@@ -1,6 +1,8 @@
 package main.java;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -15,7 +17,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         System.out.println("start");
         try {
-            BorderPane root = new BorderPane();
+            Parent root = FXMLLoader.load(getClass().getResource("Frontend.fxml"));
             Scene scene = new Scene(root, 400, 400);
             stage.setScene(scene);
             stage.show();
