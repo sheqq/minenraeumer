@@ -95,4 +95,8 @@ public class GenerateMap {
             System.out.println();
         }
     }
+
+    public Field getField(int x, int y) {
+        return this.board[y][x];
+    }
 }
