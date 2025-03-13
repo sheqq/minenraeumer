@@ -10,6 +10,7 @@ public class FrontendController {
 
     @FXML
     public void click() {
+        
         // Get the fx:id of the button
         String buttonId = myButton.getId();
         System.out.println("Button ID: " + buttonId);
