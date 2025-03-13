@@ -17,8 +17,9 @@ public class Main extends Application {
         System.out.println("start");
         try {
             Parent root = FXMLLoader.load(getClass().getResource("Frontend.fxml"));
-            Scene scene = new Scene(root, 400, 400);
+            Scene scene = new Scene(root);
             stage.setScene(scene);
+            stage.setResizable(false);
             stage.show();
 
             GenerateMap map = new GenerateMap();
