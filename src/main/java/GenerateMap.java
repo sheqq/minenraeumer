@@ -3,7 +3,7 @@ package main.java;
 public class GenerateMap {
 
     private Field[][] board = new Field[9][9];
-    private int bombsToInitialize = (9 * 9) / 3;
+    private int bombsToInitialize = (9 * 9) / 4;
 
 
 
@@ -13,10 +13,10 @@ public class GenerateMap {
         int random;
         for (int a = 0; a < this.board.length; a++) {
             for(int b = 0; b < this.board[a].length; b++) {
-                random = (int) (Math.random()*2);
+                random = (int) (Math.random()*4);
                 System.out.println(random);
                 if(bombsToInitialize > 0) {
-                    if(random >= 1){
+                    if(random == 1){
                         this.board[a][b] = new Field(true);
                         bombsToInitialize--;
                     }

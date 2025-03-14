@@ -34,10 +34,15 @@ public class FrontendController {
         // Your game logic here...
 
         if(map.getField(row,col).isBomb()) {
-            clickedButton.setBackground(Background.fill(Color.BLACK));
+            clickedButton.setBackground(Background.fill(Color.RED));
         } else {
             clickedButton.setText(String.valueOf(map.getField(row, col).getBombsSurrounded()));
         }
+    }
+
+    @FXML
+    public void initialize() {
+
     }
 
 
