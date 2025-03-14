@@ -21,9 +21,6 @@ public class Main extends Application {
             stage.setScene(scene);
             stage.setResizable(false);
             stage.show();
-
-            GenerateMap map = new GenerateMap();
-            map.printBackend();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

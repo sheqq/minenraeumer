@@ -3,7 +3,7 @@ package main.java;
 public class GenerateMap {
 
     private Field[][] board = new Field[9][9];
-    private int bombsToInitialize = (9 * 9) / 2;
+    private int bombsToInitialize = (9 * 9) / 3;
 
 
 
@@ -27,6 +27,7 @@ public class GenerateMap {
             }
         }
         initializeSurround();
+        printBackend();
     }
 
     private void initializeSurround() {
@@ -96,7 +97,7 @@ public class GenerateMap {
         }
     }
 
-    public Field getField(int x, int y) {
-        return this.board[y][x];
+    public Field getField(int row, int col) {
+        return this.board[row][col];
     }
 }
